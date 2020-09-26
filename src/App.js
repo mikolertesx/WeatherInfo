@@ -6,6 +6,8 @@ import {
 import {Provider} from 'react-redux';
 import HereCard from "./components/HereCard";
 
+import "./App.css";
+
 function App() {
   return (
     <div className="App">
