@@ -1,4 +1,4 @@
-import {SET_LOCATION} from './actionTypes';
+import {SET_LOCATION, SET_DATE} from './actionTypes';
 
 function setLocation(location) {
   return {
@@ -10,4 +10,11 @@ function setLocation(location) {
   }
 }
 
-export {setLocation}
+function setDate(date) {
+  return {
+    type: SET_DATE,
+    date: date,
+  }
+}
+
+export {setLocation, setDate}

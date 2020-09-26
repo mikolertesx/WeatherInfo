@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { weatherIcons } from './weatherIcons';
 
 const baseUrl = 'https://www.metaweather.com/api';
 // let currentLocation = null;
@@ -11,10 +12,10 @@ const getLocation = async (latt, long) => {
   const composedUrl = composeUrl(baseUrl, `location/search/?lattlong=${latt},${long}`);
 
   const location = await Axios.get(composedUrl);
-  console.log(location);
+  // console.log(location);
 
   // Closest place by distance.
-  return location.data[0].woeid;
+  return location.data;
 }
 
 const getLocationData = async(woeid) => {
@@ -32,8 +33,18 @@ const getLocationDataDay = async(woeid, date) => {
   return location.data;
 }
 
+const getImageSource = (picture) => {
+  return `https://www.metaweather.com/static/img/weather/png/64/${picture}.png`;
+}
+
+const getImageSourceFromName = (picture) => {
+  return `https://www.metaweather.com/static/img/weather/png/64/${weatherIcons[picture]}.png`;
+}
+
 export {
   getLocation,
   getLocationData,
   getLocationDataDay,
+  getImageSource,
+  getImageSourceFromName,
 }

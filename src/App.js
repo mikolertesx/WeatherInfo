@@ -4,14 +4,13 @@ import {
 } from "./store/reducer";
 
 import {Provider} from 'react-redux';
-
-import WeatherCard from './components/WeatherCard';
+import HereCard from "./components/HereCard";
 
 function App() {
   return (
     <div className="App">
       <Provider store={LocationStore}>
-      <WeatherCard />
+      <HereCard />
       </Provider>
     </div>
   );

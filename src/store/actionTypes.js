@@ -1,3 +1,4 @@
 const SET_LOCATION = 'SET_LOCATION';
+const SET_DATE = 'SET_DATE';
 
-export {SET_LOCATION}
+export {SET_LOCATION, SET_DATE}
