@@ -61,11 +61,13 @@ const WeatherCard = (props) => {
   }
 
   let iconOrQuestion = weather ? (
-    <img
-      src={getImageSourceFromName(weather)}
-      alt="Unknown Status"
-      className="weather-img"
-    />
+    <div className="weather-img-container">
+      <img
+        src={getImageSourceFromName(weather)}
+        alt="Unknown Status"
+        className="weather-img"
+      />
+    </div>
   ) : (
     <div className="empty-div">
       <h1>?</h1>
@@ -74,7 +76,9 @@ const WeatherCard = (props) => {
 
   const onStarted = (
     <div className="weather-card">
-      <h1 style={{textAlign: 'center', marginTop: '12px'}}>How hot is where I am right now?</h1>
+      <h1 style={{ textAlign: "center", marginTop: "12px" }}>
+        How hot is where I am right now?
+      </h1>
       <div className="weather-presentation">
         <div className="empty-div">
           <h1>?</h1>
