@@ -34,11 +34,11 @@ const getLocationDataDay = async(woeid, date) => {
 }
 
 const getImageSource = (picture) => {
-  return `https://www.metaweather.com/static/img/weather/png/64/${picture}.png`;
+  return `https://www.metaweather.com/static/img/weather/${picture}.svg`;
 }
 
 const getImageSourceFromName = (picture) => {
-  return `https://www.metaweather.com/static/img/weather/png/64/${weatherIcons[picture]}.png`;
+  return `https://www.metaweather.com/static/img/weather/${weatherIcons[picture]}.svg`;
 }
 
 export {
