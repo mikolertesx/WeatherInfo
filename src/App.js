@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react";
+import {
+  LocationStore,
+} from "./store/reducer";
+
+import {Provider} from 'react-redux';
+
+import WeatherCard from './components/WeatherCard';
 
 function App() {
   return (
     <div className="App">
-      <p>Weather app here!</p>
+      <Provider store={LocationStore}>
+      <WeatherCard />
+      </Provider>
     </div>
   );
 }
-
+// default connect(mapStateToProps, mapDispatchToProps)(App)
 export default App;
