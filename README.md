@@ -6,3 +6,6 @@ CORS-Requests failed everytime, luckily I found a great extension for Chrome (Ac
 
 ## Technologies
 By trying to use best practices, I've added React-Redux to manage the place and date of the app everywhere.
+
+## Live DEMO
+[Weather Info](https://mikolertesx.github.io/WeatherInfo)
