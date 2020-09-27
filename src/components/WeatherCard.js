@@ -32,13 +32,13 @@ const WeatherCard = (props) => {
 
           const currentWeather = locationData["consolidated_weather"][0];
 
-          const maxTemp = currentWeather["max_temp"];
-          const minTemp = currentWeather["min_temp"];
-          const temp = currentWeather["the_temp"];
+          const maxTemp = currentWeather["max_temp"].toFixed(2);
+          const minTemp = currentWeather["min_temp"].toFixed(2);
+          const temp = currentWeather["the_temp"].toFixed(2);
 
           setLocationString(`${location.title} by approximation.`);
           setWeather(currentWeather["weather_state_name"]);
-          setTemperatureString(`${minTemp}° > ${temp}° < ${maxTemp}°`);
+          setTemperatureString(`${minTemp} C° > ${temp} C° < ${maxTemp} C°`);
           setCurrentStatus(Status.READY);
         } catch (error) {
           setCurrentStatus(Status.ERROR);
